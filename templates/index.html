@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Home - Gender Recognition WebApp{% endblock %}
+{% block content %}
+<div class="text-center text-light">
+  <h1 class="display-4 mb-4">Welcome to the Gender Recognition WebApp</h1>
+  <p class="lead mb-5">
+    Our web application utilizes state-of-the-art machine learning techniques to analyze facial images and predict gender with remarkable accuracy.
+  </p>
+  
+  <img src="{{ url_for('static', filename='images/model_flow.png') }}" 
+       alt="Model Flow" 
+       class="img-fluid rounded mb-5" 
+       style="max-width:600px;">
+  
+  <div class="mb-5">
+    <h3>How Our Model Works</h3>
+    <p class="mb-3">
+      Our system begins with face detection using OpenCV’s Haar Cascade classifier. Once a face is detected, it undergoes a series of preprocessing steps:
+      normalization, resizing, and flattening. Then, we subtract the mean face and use Principal Component Analysis (PCA) for dimensionality reduction.
+      Finally, the processed image is fed into an SVM classifier to predict the gender with a corresponding confidence score. This robust pipeline 
+      ensures accurate and efficient gender classification even under varying conditions.
+    </p>
+    <p>
+      The entire process is optimized to handle both static images and videos, making it a versatile solution for various applications.
+    </p>
+  </div>
+  
+  <div class="mb-5">
+    <h3>Tech Stack Used</h3>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a href="https://www.python.org" target="_blank" 
+         class="badge bg-primary p-3 text-decoration-none fs-5">Python</a>
+      <a href="https://flask.palletsprojects.com/" target="_blank" 
+         class="badge bg-success p-3 text-decoration-none fs-5">Flask</a>
+      <a href="https://opencv.org" target="_blank" 
+         class="badge bg-info p-3 text-decoration-none fs-5">OpenCV</a>
+      <a href="https://scikit-learn.org" target="_blank" 
+         class="badge bg-warning text-dark p-3 text-decoration-none fs-5">scikit-learn</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" 
+         class="badge bg-danger p-3 text-decoration-none fs-5">HTML/CSS/JS</a>
+    </div>
+  </div>
+  
+  <a href="{{ url_for('gender') }}" class="btn btn-lg btn-outline-light mt-4">
+    Go to Gender Identification
+  </a>
+</div>
+{% endblock %}

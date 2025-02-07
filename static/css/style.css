@@ -1,0 +1,43 @@
+/* Body with a dark background and subtle gradient */
+body {
+    background: linear-gradient(135deg, #343a40, #212529);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Navbar adjustments */
+  .navbar {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer styling */
+  footer {
+    font-size: 0.9rem;
+  }
+  
+  /* Ensure images have a soft border */
+  img.rounded {
+    border: 2px solid #dee2e6;
+  }
+  
+  /* Tech Stack Badge Hover Effect */
+  a.badge:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Button styling to complement dark theme */
+  .btn-outline-light {
+    border-color: #f8f9fa;
+    color: #f8f9fa;
+  }
+  .btn-outline-light:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
