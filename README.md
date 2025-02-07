@@ -1,9 +1,5 @@
 # Gender Recognition WebApp 🎭  
 
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/gender-recognition-webapp)
-![GitHub contributors](https://img.shields.io/github/contributors/your-username/gender-recognition-webapp)
-![GitHub stars](https://img.shields.io/github/stars/your-username/gender-recognition-webapp?style=social)
-
 ## 🔍 Overview  
 
 This is a **Flask-based web application** that uses **Deep Learning and Computer Vision** to detect gender from images and videos.  
