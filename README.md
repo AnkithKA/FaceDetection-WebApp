@@ -5,8 +5,7 @@
 This is a **Flask-based web application** that uses **Deep Learning and Computer Vision** to detect gender from images and videos.  
 It leverages **OpenCV, a pre-trained CNN model, and scikit-learn** to analyze facial features and classify gender.  
 
-🚀 **Live Demo Video:**  
-[![Watch the Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)  
+ 
 
 ---
 
