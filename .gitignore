@@ -1,0 +1,43 @@
+# Python-specific
+__pycache__/
+*.pyc
+*.pyo
+*.pdb
+
+# Virtual Environment
+facerecognition_flask/
+*.env
+
+# Flask specific
+instance/
+*.db
+*.sqlite
+*.log
+
+# Uploads and results
+static/uploads/
+static/results/
+
+# Compiled frontend assets
+node_modules/
+dist/
+build/
+
+# IDE/editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+
+# Environment files
+.env
+.flaskenv
