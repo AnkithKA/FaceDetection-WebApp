@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from face_recognition import faceRecognitionPipeline
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = os.environ.get('SECRET_KEY')
 
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max
 UPLOAD_FOLDER = 'static/uploads'
