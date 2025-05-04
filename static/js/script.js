@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     console.log("Document loaded. Ready for further enhancements!");
 
     // Webcam capture elements
@@ -13,30 +13,42 @@ document.addEventListener("DOMContentLoaded", function(){
         // Request access to the webcam
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia({ video: true })
-                .then(function(stream) {
+                .then(function (stream) {
                     video.srcObject = stream;
                     video.play();
                 })
-                .catch(function(err) {
+                .catch(function (err) {
                     console.error("Error accessing webcam: " + err);
                 });
         }
-        
+
         // When the "Capture" button is clicked:
-        captureBtn.addEventListener("click", function() {
-            // Set canvas dimensions to match video dimensions
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            // Draw the current video frame on the canvas
+        captureBtn.addEventListener("click", function () {
             const context = canvas.getContext('2d');
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
-            
-            // Convert the canvas image to a data URL (base64)
-            const dataURL = canvas.toDataURL('image/png');
-            // Save the data URL in the hidden input field
+
+            // Resize to smaller dimensions to reduce payload size
+            const resizedWidth = 320;
+            const resizedHeight = 240;
+
+            canvas.width = resizedWidth;
+            canvas.height = resizedHeight;
+
+            // Draw the video frame scaled down
+            context.drawImage(video, 0, 0, resizedWidth, resizedHeight);
+
+            // Convert canvas to base64 string (JPEG is smaller than PNG)
+            const dataURL = canvas.toDataURL('image/jpeg', 0.7); // 70% quality
             imageDataInput.value = dataURL;
-            // Enable the submit button
+
+            // Enable submit button
             submitWebcam.disabled = false;
+
+            // Optional: Preview captured image
+            const preview = document.getElementById("preview");
+            if (preview) {
+                preview.src = dataURL;
+                preview.style.display = 'block';
+            }
         });
     }
 });
