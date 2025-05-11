@@ -58,9 +58,13 @@ This web application uses **Deep Learning and Computer Vision** techniques to de
 
 ## 📸 Screenshots
 
-| Home Page | Results Page |
-|:-:|:-:|
-| ![Home Page](https://github.com/yourusername/gender-recognition-webapp/raw/main/static/images/home.png) | ![Results Page](https://github.com/yourusername/gender-recognition-webapp/raw/main/static/images/results.png) |
+| Home Page |
+|:-:|
+| ![image](https://github.com/user-attachments/assets/f9995ac6-d945-4767-afd6-6344b215a8c5)
+| Results Page |
+ | ![image](https://github.com/user-attachments/assets/d1cd6b1e-5bb5-4a65-8392-dfe7d21a92ec)
+ 
+
 
 ## 🚀 Installation & Setup
 
@@ -129,6 +133,16 @@ pillow==8.3.1
 4. **View Results**:
    - See gender predictions with confidence scores
    - Download or share the results
+  
+## 🌐 Deployment
+
+This project is deployed using [Render](https://render.com), a unified platform to build and run all your apps and websites. The live version can be accessed at [https://facedetection-webapp-zbbc.onrender.com/](https://facedetection-webapp-zbbc.onrender.com/).
+
+### Deployment Configuration
+- **Platform**: Render Web Service
+- **Environment**: Python
+- **Build Command**: `pip install -r requirements.txt`
+- **Start Command**: `gunicorn app:app`
 
 ## 🤝 Contributing
 
@@ -153,9 +167,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/gender-recognition-webapp](https://github.com/yourusername/gender-recognition-webapp)
+Ankith K A  - LinkedIn - https://linkedin.com/in/ankith-ka
 
 ---
 
